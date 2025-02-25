@@ -1,0 +1,105 @@
+@use "./fonts" as *;
+$base-font-size: 18px; // Base font size
+$base-line-height: 32px; // Base line height
+$min-viewport: 320px; // Minimum viewport width
+$max-viewport: 1760px; // Maximum viewport width
+
+/*
+	Updated SCSS variables file that includes:
+  - A color-scheme declaration to support both light and dark modes.
+  - A media query to automatically switch to dark theme variables when the user prefers dark mode.
+  - A manual override via the .dark-theme class.
+*/
+
+:root {
+	/* Light theme variables */
+	--color-primary: #fff;
+	--color-primary-rgb: 255 255 255;
+	--color-secondary: #fbd784;
+	--color-third: #0b1d26;
+	--color-third-rgb: 11 29 38;
+
+	/* Inform the browser that both light and dark color schemes are available */
+	color-scheme: light dark;
+}
+
+/* Automatically apply dark theme variables for users who prefer dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-primary: #eff2f5;
+		--color-secondary: #d9d9d9;
+		--color-tertiary: #222531;
+		--color-fourth: #856175a8;
+		--color-fifth: #4c57fb;
+		--color-six: #616e85;
+		--color-seven: #1c1f2a;
+	}
+}
+
+/* Option for a manual dark theme override */
+
+.dark-theme {
+	--color-primary: #eff2f5;
+	--color-secondary: #d9d9d9;
+	--color-tertiary: #222531;
+	--color-fourth: #856175a8;
+	--color-fifth: #4c57fb;
+	--color-six: #616e85;
+	--color-seven: #1c1f2a;
+}
+
+$main-font:
+	"Gilroy",
+	-apple-system,
+	"BlinkMacSystemFont",
+	"Segoe UI",
+	"Roboto",
+	"Helvetica Neue",
+	"Arial",
+	sans-serif;
+
+$main-font-bold:
+	"Gilroy-Bold",
+	-apple-system,
+	"BlinkMacSystemFont",
+	"Segoe UI",
+	"Roboto",
+	"Helvetica Neue",
+	"Arial",
+	sans-serif;
+
+$main-font-extra:
+	"Gilroy-ExtraBold",
+	-apple-system,
+	"BlinkMacSystemFont",
+	"Segoe UI",
+	"Roboto",
+	"Helvetica Neue",
+	"Arial",
+	sans-serif;
+
+$secondary-font: "Chronicle Display Semi", "Georgia", "Times New Roman", serif;
+
+$index-size: calc(1vw * 1vh);
+
+$fs-sm: 16px;
+$fs-md: $base-font-size;
+$fs-lg: 24px;
+$fs-xl: 32px;
+$fs-xxl: 64px;
+$fs-xxxl: 88px;
+$fs-huge: 240px;
+
+// // Адаптивные (резиновые) размеры
+
+// $fs-md-fluid: fluid-font(16, 1.8, 18);     // От 16px до 18px
+
+// $fs-24-fluid: fluid-font(20, 2.4, 24);     // От 20px до 24px
+
+// $fs-32-fluid: fluid-font(24, 3.2, 32);     // От 24px до 32px
+
+// $fs-64-fluid: fluid-font(48, 6.4, 64);     // От 48px до 64px
+
+// $fs-88-fluid: fluid-font(64, 8.8, 88);     // От 64px до 88px
+
+// $fs-240-fluid: fluid-font(160, 24, 240);   // От 160px до 240px (например, для крупных заголовков)

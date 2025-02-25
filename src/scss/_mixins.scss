@@ -1,0 +1,27 @@
+@use "sass:meta";
+@use "sass:list";
+@use "sass:string";
+
+@mixin transition($properties, $duration: 0.5s, $timing-function: ease-in-out, $delay: 0s) {
+	$transitions: ();
+
+	@each $property in $properties {
+		$transition-value: string.unquote("#{$property} #{$duration} #{$timing-function} #{$delay}");
+		$transitions: list.append($transitions, $transition-value, comma);
+	}
+
+	@each $prefix in ("-webkit-", "-moz-", "-ms-", "-o-", "") {
+		#{$prefix}transition: $transitions;
+	}
+}
+
+/* stylelint-disable rule-empty-line-before */
+@mixin font($font-size-px, $line-height-px, $base-context: 16px) {
+	font-size: calc($font-size-px / $base-context) + rem;
+	line-height: calc($line-height-px / $font-size-px);
+}
+
+@mixin spacing($font-size, $percentage) {
+	$spacing: calc(($font-size * $percentage) / 100);
+	letter-spacing: $spacing;
+}

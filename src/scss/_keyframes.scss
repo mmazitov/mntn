@@ -1,0 +1,23 @@
+@keyframes scrollDown {
+	0% {
+		transform: rotate(90deg) translateX(0);
+	}
+	50% {
+		transform: rotate(90deg) translateX(10px);
+	}
+	100% {
+		transform: rotate(90deg) translateX(0);
+	}
+}
+
+@keyframes readMore {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

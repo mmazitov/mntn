@@ -1,0 +1,55 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/gilroy/Gilroy-Medium.eot");
+	src:
+		url("../fonts/gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/gilroy/Gilroy-Medium.woff2") format("woff2"),
+		url("../fonts/gilroy/Gilroy-Medium.woff") format("woff"),
+		url("../fonts/gilroy/Gilroy-Medium.ttf") format("truetype"),
+		url("../fonts/gilroy/Gilroy-Medium.svg#Gilroy-Medium") format("svg");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy-Bold";
+	src: url("../fonts/gilroy/Gilroy-Bold.eot");
+	src:
+		url("../fonts/gilroy/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/gilroy/Gilroy-Bold.woff2") format("woff2"),
+		url("../fonts/gilroy/Gilroy-Bold.woff") format("woff"),
+		url("../fonts/gilroy/Gilroy-Bold.ttf") format("truetype"),
+		url("../fonts/gilroy/Gilroy-Bold.svg#Gilroy-Bold") format("svg");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy-ExtraBold";
+	src: url("../fonts/gilroy/Gilroy-ExtraBold.eot");
+	src:
+		url("../fonts/gilroy/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/gilroy/Gilroy-ExtraBold.woff2") format("woff2"),
+		url("../fonts/gilroy/Gilroy-ExtraBold.woff") format("woff"),
+		url("../fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype"),
+		url("../fonts/gilroy/Gilroy-ExtraBold.svg#Gilroy-ExtraBold") format("svg");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Chronicle Display Semi";
+	src: url("../fonts/chronicle/ChronicleDisplay-Semi.eot");
+	src:
+		url("../fonts/chronicle/ChronicleDisplay-Semi.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/chronicle/ChronicleDisplay-Semi.woff2") format("woff2"),
+		url("../fonts/chronicle/ChronicleDisplay-Semi.woff") format("woff"),
+		url("../fonts/chronicle/ChronicleDisplay-Semi.ttf") format("truetype"),
+		url("../fonts/chronicle/ChronicleDisplay-Semi.svg#ChronicleDisplay-Semi") format("svg");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

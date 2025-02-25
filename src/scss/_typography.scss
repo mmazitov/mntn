@@ -1,0 +1,173 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+@use "sass:math";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $main-font-bold;
+	font-size: font-fluid($fs-sm, $fs-md);
+	line-height: line-height-fluid(32px);
+	color: var(--color-primary);
+	background: var(--color-third);
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $secondary-font;
+	margin-bottom: 5px;
+}
+
+h1 {
+	font-size: font-fluid($fs-xxl, $fs-xxxl);
+	margin-bottom: size-fluid(15, 32);
+	line-height: line-height-fluid(100px);
+}
+
+h2 {
+	font-size: font-fluid(calc($fs-xxl - 16px), $fs-xxl);
+	line-height: 1;
+	margin-bottom: size-fluid(10, 28);
+}
+
+h3 {
+	display: flex;
+	align-items: center;
+	font-family: $main-font-extra;
+	line-height: 1;
+	letter-spacing: 6px;
+	color: var(--color-secondary);
+	text-transform: uppercase;
+	margin-bottom: size-fluid(15, 32);
+	&:before {
+		display: block;
+		width: 72px;
+		height: 2px;
+		background: var(--color-secondary);
+		content: "";
+		margin-right: 32px;
+	}
+}
+
+h4 {
+	font-size: font-fluid($fs-sm, calc($fs-sm - 2px));
+	margin-bottom: size-fluid(12, 28);
+}
+
+h5 {
+	font-size: font-fluid(calc($fs-sm - 2px), calc($fs-sm - 4px));
+	margin-bottom: size-fluid(10, 26);
+}
+
+h6 {
+	font-size: font-fluid(calc($fs-sm - 4px), calc($fs-sm - 6px));
+	margin-bottom: size-fluid(18, 24);
+}
+
+p {
+	margin-bottom: size-fluid(18, 27);
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+a {
+	position: relative;
+	color: var(--color-primary);
+	text-decoration: none;
+
+	@include transition(color);
+	&:before {
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 1px;
+		content: "";
+		background: var(--color-primary);
+
+		@include transition(width);
+	}
+	&:hover,
+	&.active {
+		&:before {
+			width: 100%;
+		}
+	}
+	&.accent {
+		color: var(--color-secondary);
+		&:before {
+			content: none;
+		}
+		svg {
+			fill: var(--color-secondary);
+		}
+		&:hover {
+			color: var(--color-primary);
+			svg {
+				fill: var(--color-primary);
+			}
+		}
+	}
+}
+
+ul,
+ol {
+	list-style-position: outside;
+	padding: 0;
+
+	li {
+		margin-bottom: size-fluid(10, 16);
+	}
+}
+
+blockquote {
+	margin-bottom: size-fluid(20, 32);
+	padding: 0 0 0 size-fluid(5, 10);
+	color: var(--color-text-secondary);
+	border-left: 2px solid var(--color-primary);
+	font-style: italic;
+}
+
+code,
+pre {
+	padding: 2px 4px;
+	font-family: "Courier New", Courier, monospace;
+	background-color: var(--color-background-secondary);
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+svg {
+	width: 20px;
+	aspect-ratio: 1;
+	fill: var(--color-primary);
+	stroke: none;
+
+	@include transition(stroke fill);
+}
+
+.container {
+	position: relative;
+	margin-inline: auto;
+	max-width: $max-viewport;
+	padding: 0 5px;
+}
